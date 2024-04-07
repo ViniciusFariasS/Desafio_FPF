@@ -1,0 +1,26 @@
+[
+  {
+    "foto": "../assets/profilePictures/Perfil1.png",
+    "nome": "João Silva",
+    "idade": 35,
+    "cpf": "123.456.789-00",
+    "email": "joao@example.com",
+    "telefone": "(11) 98765-4321",
+    "endereco": "Rua das Flores, 123, Bairro Central, Cidade A, Estado X, CEP: 12345-678",
+    "data_nascimento": "1989-05-20",
+    "status": "Ativo",
+    "genero": "Masculino"
+  },
+  {
+    "foto": "../assets/profilePictures/Perfil2.png",
+    "nome": "Maria Souza",
+    "idade": 28,
+    "cpf": "987.654.321-00",
+    "email": "maria@example.com",
+    "telefone": "(11) 12345-6789",
+    "endereco": "Avenida Principal, 456, Bairro Sul, Cidade B, Estado Y, CEP: 98765-432",
+    "data_nascimento": "1996-10-15",
+    "status": "Inativo",
+    "genero": "Feminino"
+  }
+]

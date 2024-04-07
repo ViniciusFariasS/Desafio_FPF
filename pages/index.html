@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Cadastro de Pessoas</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <button id="toggleMenu">
+      <img src="../assets/menu.svg" alt="">
+    </button>
+    <div class="logo">
+      <img src="../assets/logo.svg" alt="Logo da Empresa">
+      <h4>Federação Paulista de Futebol</h4>
+    </div>
+    <div class="user">
+      <img src="../assets/profilePictures/perfil3.png" alt="Foto do Usuário">
+    </div>
+  </header>
+
+  <main id="mainContent" class="mainContent">
+    <nav>
+      <ul id="nav-list">
+        <li id='nav-item'class="active"><a href="#">Gerenciar cadastros</a></li>
+      </ul>
+    </nav>
+    <div id="mainContent-content" class="mainContent-content">
+      <div class="mainContent-title">
+        <h3>Gerenciar cadastros</h3>
+        <button id="addPersonBtn">
+          <img src="../assets/add.svg" alt="">
+          Adicionar
+        </button>
+      </div>
+      <div class="content-body">
+        <div id="contentHeader" class="content-header">
+          <h4>Cadastros</h4>
+        </div>
+        <div id="content" class="content">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" id="personInfoModal">
+    <!-- Modal para adicionar nova pessoa -->
+  </div>
+
+  <div id="addPersonModal" class="form-modal">
+    <div class="form-modal-content">
+      <span class="close">&times;</span>
+      <h2>Cadastrar nova pessoa</h2>
+      <form id="personForm">
+        <div>
+          <label for="photo">Foto:</label>
+          <input type="file" id="photo" name="photo" accept="image/*" required>
+        </div>
+        <div>
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="address">Endereço:</label>
+          <input type="text" id="address" name="address" required>
+        </div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="phone">Telefone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+          <label for="birthdate">Data de Nascimento:</label>
+          <input type="date" id="birthdate" name="birthdate" required>
+        </div>
+        <div>
+          <label for="gender">Gênero:</label>
+          <select id="gender" name="gender" required>
+            <option value="">Selecione</option>
+            <option value="male">Masculino</option>
+            <option value="female">Feminino</option>
+            <div>
+              <option value="other">Outro</option>
+          </select>
+        </div>
+
+        <button type="submit">Salvar</button>
+    </div>
+    </form>
+  </div>
+  </div>
+
+  <script src="../scripts/script.js"></script>
+</body>
+
+</html>
