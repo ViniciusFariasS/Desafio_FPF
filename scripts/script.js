@@ -3,17 +3,40 @@ document.addEventListener('DOMContentLoaded', function () {
   const nav = document.querySelector('nav');
   const navList = document.getElementById('nav-list');
   const navItem = document.getElementById('nav-item');
+  const navItemMore = document.getElementById('nav-item-more');
   const mainContentContent = document.getElementById('mainContent-content');
   let people = [];
   const content = document.getElementById('content');
+  const more = document.getElementById('more');
   const modal = document.getElementById('personInfoModal');
 
   toggleMenuBtn.addEventListener('click', function () {
-    nav.classList.toggle('hidden');
-    navList.classList.toggle('noShow');
-    navItem.classList.toggle('noShowMobile');
-    mainContentContent.classList.toggle('mainContent-content--fullWidth')
+    nav?.classList.toggle('hidden');
+    mainContentContent?.classList.toggle('mainContent-content--fullWidth');
+    more?.classList.toggle('mainContent-content--fullWidth');
+    navList?.classList.toggle('noShow');
+    navItemMore?.classList.toggle('noShowMobile');
+    navItem?.classList.toggle('noShowMobile');
   });
+
+  navItem.addEventListener('click', function () {
+    navItem.classList.toggle('active');
+    mainContentContent.style.display = 'flex';
+    more.style.display = 'none';
+    if (navItemMore.classList.contains('active')) {
+      navItemMore.classList.toggle('active');
+    }
+  })
+
+  navItemMore.addEventListener('click', function () {
+    mainContentContent.style.display = 'none';
+    more.style.display = 'flex';
+    navItemMore.classList.toggle('active');
+    if (navItem.classList.contains('active')) {
+      navItem.classList.toggle('active');
+
+    }
+  })
 
   fetch('../data/data.json')
     .then(response => response.json())
@@ -68,9 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const seeMore = document.createElement('div');
     seeMore.classList.add('seeMore');
-    seeMore.innerHTML = `    
-      <button onclick="getModalInfo(${person.cpf.replaceAll('.', '').replace('-', '')})">Ver Cadastro Completo</button>
-    `;
+    seeMore.innerHTML = `<button onclick="getModalInfo(${person.cpf.replaceAll('.', '').replace('-', '')})">Ver Cadastro Completo</button>`;
 
     modalContent.appendChild(img);
     modalContent.appendChild(fullDetails);

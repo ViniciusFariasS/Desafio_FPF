@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gerenciamento de Cadastro de Pessoas</title>
+  <title>Desafio Federação Paulista de Futebol</title>
+  <link rel="icon" href="./assets/favicon.ico" />
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +31,8 @@
   <main id="mainContent" class="mainContent">
     <nav>
       <ul id="nav-list">
-        <li id='nav-item'class="active"><a href="#">Gerenciar cadastros</a></li>
+        <li id='nav-item' class="active"><a href="#">Gerenciar cadastros</a></li>
+        <li id='nav-item-more'><a href="#">Mais informações</a></li>
       </ul>
     </nav>
     <div id="mainContent-content" class="mainContent-content">
@@ -48,6 +50,29 @@
         <div id="content" class="content">
         </div>
       </div>
+    </div>
+    <div id="more" class="more">
+      <div class="content-body">
+        <div id="contentHeader" class="content-header">
+          <h4>Mais informações</h4>
+        </div>
+        <div class="content">
+          <div class="more-content-card">
+            <img src="./assets/profilePictures/Perfil4.png" alt="">
+            <div class="content-text">
+              <span>Desenvolvido por:</span>
+              <div class="linkedin">
+                <img src="./assets/linkedin.svg" alt="">
+                <a href="https://www.linkedin.com/in/vin%C3%ADcius-f-4a6691128/" target="_blank">
+                  <strong>Vinícius Farias Silva</strong>
+                </a>
+              </div>
+              <span>Desenvolvedor Front-end Pleno</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
 
@@ -90,14 +115,13 @@
             <option value="">Selecione</option>
             <option value="male">Masculino</option>
             <option value="female">Feminino</option>
-            <div>
-              <option value="other">Outro</option>
+            <option value="other">Outro</option>
           </select>
         </div>
 
         <button type="submit">Salvar</button>
+      </form>
     </div>
-    </form>
   </div>
   </div>
 
